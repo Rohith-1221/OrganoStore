@@ -1,25 +1,68 @@
-import logo from './logo.svg';
-import './App.css';
+import { BrowserRouter as Router,Routes,Route } from 'react-router-dom'
+import  './App.css';
+import LoginForm from './components/LoginForm';
+import { useState } from 'react';
+import Home from './components/Home';
+import Register from './components/Register';
+import Display from './components/Display';
+import Blog from './components/Blog';
+import Contact from './components/Contact';
+// import Dashboard from './components/Dashboard';
+import Cart from "./components/cart/Cart";
+import CardList from './components/cart/CardList';
+import Testinomials from './components/Testinomials';
+import Profile from './components/Profile';
 
 function App() {
+  const [isLoggedin,setIsloggedin]=useState(false)
+  const handleLogin=()=>{
+    setIsloggedin(true)
+  }
+  // const handleLogout=()=>{
+  //   setIsloggedin(false)
+  // }
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+   <>
+      <Router>
+        {/* <Dashboard/> */}
+          <Routes>
+              <Route path='/' element={<Display setLoggedin={setIsloggedin}/>}/>
+              <Route path='/login' element={<LoginForm handleLogin={handleLogin}/>}/>
+              <Route path='/Home' element={<Home isLoggedin={isLoggedin}/>}/>
+              <Route path='/register' element={<Register setLoggedin={setIsloggedin}/>}/>
+              <Route path='/Products' element={<CardList/>}/>
+              <Route path='/Blog' element={<Blog/>}/>
+              <Route path='/Contact' element={<Contact/>}/>
+              <Route path='/Cart' element={<Cart/>}/>
+              <Route path='/Testinomials' element={<Testinomials/>}/>
+              <Route path='/Profile' element={<Profile/>}/>
+          </Routes>
+      </Router>
+    </>
   );
 }
 
 export default App;
+
+
+
+// import "./App.css";
+
+
+// import CardList from "./components/cart/CardList";
+// import { Route, Routes } from "react-router-dom";
+// import Cart from "./components/cart/Cart";
+
+// export default function App() {
+//   return (
+//     <div className="App">
+     
+//       <Routes>
+//            <Route path="/" element={<CardList  />}/>
+//            <Route path="/cart" element={<Cart/>}/>
+             
+
+//       </Routes>
+//     </div>
+//   );
+// }
