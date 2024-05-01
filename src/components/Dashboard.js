@@ -43,8 +43,8 @@ const Dashboard=({handleLogout})=>{
     <>
     {/* navigation bar */}
     <AppBar position="sticky">
-        <Toolbar disableGutters className='bg-slate-800 '>
-          <Typography sx={{ display: { xs: 'none', md: 'flex',margin:'0px 150px' },border:'1px solid #fff'}}>
+        <Toolbar disableGutters className='bg-neutral-600'>
+          <Typography sx={{ display: { xs: 'none', md: 'flex',margin:'0px 150px' }}}>
                 <img src='Images/Logo.png' alt='logo' className='logoimg' />
           </Typography>
 
@@ -89,17 +89,18 @@ const Dashboard=({handleLogout})=>{
           <Typography variant="h5" className='text-7xl text-center text-slate-300' component="a" href="/" sx={{mr: 2,display: { xs: 'flex', md: 'none' },flexGrow: 1}}>
               ORGANO
           </Typography>
-          <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
+          <Box sx={{ flexGrow: 1,marginLeft:'300px', display: { xs: 'none', md: 'flex' } }}>
             {pages.map((page) => (
-              <Button
+              <Typography
                 key={page}
+                variant='h6'
                 component={Link}
                 to={`/${page}`}
                 onClick={handleCloseNavMenu}
-                sx={{ my: 2, color: 'white', display: 'block' }}
+                sx={{ m: 2, color: 'black', display: 'block' }}
               >
                 {page}
-              </Button>
+              </Typography>
             ))}
           </Box>
           <Box className='cartlogout d-flex'>     

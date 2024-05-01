@@ -20,12 +20,13 @@ const Profile = ({ usermail }) => {
     }, [usermail]);
 
     return (
-        <div className='text-center'>
+        <div className='text-center profile'>
             <Box>Welcome to Profile page </Box>
             {user && <div><Typography variant='h3'>{user.name}<br/></Typography>
             <Typography variant='h4'>{user.email}<br/></Typography>
-            <Typography variant='h4'>{user.pincode}<br/></Typography>
+            <Typography variant='h4'>{user.number}<br/></Typography>
             <Typography variant='h4'>{user.town}</Typography>
+            <Typography variant='h4'>{user.pincode}<br/></Typography>
             <Typography variant='h4'>{user.state}</Typography></div>}
         </div>
     );

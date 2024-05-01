@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import {TextField,Box,FormControl} from '@mui/material';
+import './style.css'
 
 const SearchBar = ({ handleSearch }) => {
   const [searchText, setSearchText] = useState("");
@@ -12,9 +13,9 @@ const SearchBar = ({ handleSearch }) => {
 
   return (
     <>
-      <Box  sx={{width:'40%'}}>        
-        <FormControl fullWidth>
-        <TextField type='text' label="SEARCH PRODUCTS" className='bg-gray-200 rounded' variant="filled" value={searchText} onChange={handleChange}/>
+      <Box  sx={{margin:'20px'}} className='searchbar' >        
+        <FormControl fullWidth >
+            <TextField  type='text' label="SEARCH PRODUCTS" className='bg-gray-200 rounded'  variant="filled" value={searchText} onChange={handleChange}/>
         </FormControl>
       </Box>
     </>

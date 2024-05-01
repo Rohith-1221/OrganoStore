@@ -7,7 +7,6 @@ import Register from './components/Register';
 import Display from './components/Display';
 import Blog from './components/Blog';
 import Contact from './components/Contact';
-// import Dashboard from './components/Dashboard';
 import Cart from "./components/cart/Cart";
 import CardList from './components/cart/CardList';
 import Testinomials from './components/Testinomials';
@@ -18,13 +17,9 @@ function App() {
   const handleLogin=()=>{
     setIsloggedin(true)
   }
-  // const handleLogout=()=>{
-  //   setIsloggedin(false)
-  // }
   return (
    <>
       <Router>
-        {/* <Dashboard/> */}
           <Routes>
               <Route path='/' element={<Display setLoggedin={setIsloggedin}/>}/>
               <Route path='/login' element={<LoginForm handleLogin={handleLogin}/>}/>
@@ -43,26 +38,3 @@ function App() {
 }
 
 export default App;
-
-
-
-// import "./App.css";
-
-
-// import CardList from "./components/cart/CardList";
-// import { Route, Routes } from "react-router-dom";
-// import Cart from "./components/cart/Cart";
-
-// export default function App() {
-//   return (
-//     <div className="App">
-     
-//       <Routes>
-//            <Route path="/" element={<CardList  />}/>
-//            <Route path="/cart" element={<Cart/>}/>
-             
-
-//       </Routes>
-//     </div>
-//   );
-// }

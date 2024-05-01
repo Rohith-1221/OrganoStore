@@ -10,7 +10,7 @@ const PriceSortDropdown = ({ handlePriceSort }) => {
 
   return (
     <>
-    <Box sx={{minWidth:200}} >
+    <Box sx={{minWidth:180,margin:'20px'}} >
           <FormControl fullWidth>
             <InputLabel id="demo-simple-select-label">Price</InputLabel>
             <Select labelId="demo-simple-select-label" className="bg-gray-200 "

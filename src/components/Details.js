@@ -4,12 +4,13 @@ import axios from 'axios'
 import TextField from '@mui/material/TextField';
 import Box from '@mui/material/Box';
 import Button from '@mui/material/Button';
-import { Card, CardMedia, Typography } from '@mui/material';
+import { Typography } from '@mui/material';
 import './style.css'
 
 const Details = () => {
     const [name,setName]=useState('')
     const [email,setEmail]=useState('')
+    const [number,setNumber]=useState('')
     const [gender,setGender]=useState('')
     const [pincode,setPincode]=useState('')
     const [town,setTown]=useState('')
@@ -20,10 +21,11 @@ const Details = () => {
     const handleSubmit=async(e)=>{
         e.preventDefault()
         try{
-            const response=await axios.post('http://localhost:3003/userinfo',{name,email,gender,pincode,town,state})
+            const response=await axios.post('http://localhost:3003/userinfo',{name,email,number,gender,pincode,town,state})
             console.log(response.data)
             setName('')
             setEmail('')
+            setNumber('')
             setGender('')
             setPincode('')
             setTown('')
@@ -44,6 +46,7 @@ const Details = () => {
         <form onSubmit={handleSubmit} className='text-center'>
             <TextField label="NAME" className='bg-gray-200 rounded' variant="filled"  value={name} onChange={(e)=>setName(e.target.value)} sx={{width:'60%'}} margin='normal'/><br/>
             <TextField label="EMAIL" className='bg-gray-200 rounded' variant="filled" value={email} onChange={(e)=>setEmail(e.target.value)} sx={{width:'60%'}} margin='normal' /><br/>
+            <TextField label="NUMBER" className='bg-gray-200 rounded' variant="filled" value={number} onChange={(e)=>setNumber(e.target.value)} sx={{width:'60%'}} margin='normal' /><br/>
             <TextField label="GENDER" className='bg-gray-200 rounded' variant="filled" value={gender} onChange={(e)=>setGender(e.target.value)} sx={{width:'60%'}} margin='normal' /><br/>
             <TextField label="PINCODE" className='bg-gray-200 rounded' variant="filled" value={pincode} onChange={(e)=>setPincode(e.target.value)} sx={{width:'60%'}} margin='normal' /><br/>
             <TextField label="TOWN" className='bg-gray-200 rounded' variant="filled" value={town} onChange={(e)=>setTown(e.target.value)} sx={{width:'60%'}} margin='normal' /><br/>

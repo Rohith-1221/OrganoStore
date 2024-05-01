@@ -15,7 +15,7 @@ const SortDropdown = ({ handleSort }) => {
 
   return (
   <>
-  <Box sx={{minWidth:200}} >
+  <Box sx={{minWidth:180,margin:'20px'}} >
     <FormControl fullWidth>
       <InputLabel>Category</InputLabel>
       <Select onChange={(e) => handleSort(e.target.value)} className="bg-gray-200" label="Category">

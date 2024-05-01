@@ -5,7 +5,6 @@ import TextField from '@mui/material/TextField';
 import Box from '@mui/material/Box';
 import Button from '@mui/material/Button';
 import { Typography } from '@mui/material';
-// import Profile from './Profile';
 
 const LoginForm = ({handleLogin}) => {
     const [email,setEmail]=useState('')
@@ -47,7 +46,6 @@ const LoginForm = ({handleLogin}) => {
                 <TextField type='password' className='bg-gray-200 login' label="PASSWORD" variant="filled"  value={password} onChange={(e)=>setPassword(e.target.value)} margin='normal' required/><br/>
                 <Button type='submit' variant='contained' color='primary' sx={{margin:'10px'}}>LOGIN</Button><br/>
             </form>   
-            {/* <Profile usermail={email}/> */}
         </Box>
     </div>
   )

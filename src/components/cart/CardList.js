@@ -70,7 +70,7 @@ const CardList = () => {
           Summer special offers on juices and fruits...20%OFF
       </Typography>
       <div className="utility-container">
-        <SearchBar handleSearch={handleSearch} /><br/><br/>
+        <SearchBar handleSearch={handleSearch} />
         <SortDropdown handleSort={handleSort} />
         <PriceSortDropdown handlePriceSort={handlePriceSort} />        
       </div>
