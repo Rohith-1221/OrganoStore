@@ -17,7 +17,7 @@ import {useSelector} from 'react-redux'
 import Badge from '@mui/material/Badge';
 import './style.css'
 
-const pages = ['Home','Blog', 'Products', 'Contact','Testinomials'];
+const pages = ['Home','Blog', 'Products','Testinomials', 'Contact'];
 
 const Dashboard=({handleLogout})=>{
 
@@ -43,7 +43,7 @@ const Dashboard=({handleLogout})=>{
     <>
     {/* navigation bar */}
     <AppBar position="sticky">
-        <Toolbar disableGutters className='bg-neutral-600'>
+        <Toolbar disableGutters className='bg-neutral-700/80'>
           <Typography sx={{ display: { xs: 'none', md: 'flex',margin:'0px 150px' }}}>
                 <img src='Images/Logo.png' alt='logo' className='logoimg' />
           </Typography>
@@ -97,7 +97,8 @@ const Dashboard=({handleLogout})=>{
                 component={Link}
                 to={`/${page}`}
                 onClick={handleCloseNavMenu}
-                sx={{ m: 2, color: 'black', display: 'block' }}
+                sx={{ m: 2, display: 'block' }}
+                className='text-slate-300'
               >
                 {page}
               </Typography>

@@ -40,7 +40,7 @@ const Register = () => {
             ORGANO
         </Typography>
     </Box>
-    <Box className='text-center' sx={{margin:'70px 0px'}}>
+    <Box className='text-center bg-neutral-500/50' sx={{margin:'70px 20px',borderRadius:'20%',padding:'15px 0px'}}>
         <Typography variant='h4'className='text-7xl text-center text-white'>
             SIGN UP<br/> or<br/> REGISTRATION
         </Typography>

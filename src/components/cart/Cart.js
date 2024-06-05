@@ -6,7 +6,7 @@ import { useNavigate } from 'react-router-dom';
 import { Typography,Button, Card, Box,CardMedia, CardContent } from '@mui/material';
 
 const Cart = () => {
-
+  const scost=0;
  const navigate =  useNavigate()
  const products = useSelector((state)=>state.cart)
  const dipatch = useDispatch()
@@ -44,17 +44,23 @@ const Cart = () => {
             <Button onClick={()=>dipatch(remove(product.id))} variant='outlined' color='error' className='rbtn'>
               Remove
             </Button><br/>
-            <Button onClick={()=>dipatch(decreaseQuantity({id:product.id}))}>-</Button>
-            <Typography  variant='p' className='text-slate-600'>{product.quantity}</Typography>
+            <Button onClick={product.quantity>1?()=>dipatch(decreaseQuantity({id:product.id})):null}>-</Button>
+            <Typography  variant='p' className='text-slate-600'>{product.quantity>1?product.quantity:1}</Typography>
             <Button onClick={()=>dipatch(increseQuantity({id:product.id}))}>+</Button>
           </Card>
         ))}
       </div>
-      <Typography variant='h4' className='text-slate-50'>Total:${totalPriceOfCart}</Typography>
+      <Box className='p-2 m-2'>
+          <Typography variant='h5' className='text-slate-50'>Total amount:${totalPriceOfCart}</Typography>
+          <Typography variant='h5' className='text-slate-50'>Shipping cost:${scost}</Typography>
+      </Box>
+      <Box className='p-2 m-2'>
+        <Typography variant='h4' className='text-slate-50'>Total Payment:${totalPriceOfCart+scost}</Typography>
+      </Box>
       
     </div>
-      <Button variant='contained' color='error' onClick={handleOrder}>
-        Place order
+      <Button variant='contained'  color='error' onClick={handleOrder}>
+        Checkout and place order
       </Button>
     </div>
   );

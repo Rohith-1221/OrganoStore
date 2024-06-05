@@ -37,7 +37,7 @@ const LoginForm = ({handleLogin}) => {
                 ORGANO
             </Typography>
         </Box>
-        <Box className='text-center' sx={{margin:'200px 0px'}}>
+        <Box className='text-center bg-neutral-500/50' sx={{margin:'200px 0px',borderRadius:'50%',padding:'50px 0px'}}>
             <Typography variant='h4' className='text-7xl text-center text-white'>
                 LOGIN or SIGN IN
             </Typography>

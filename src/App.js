@@ -11,15 +11,21 @@ import Cart from "./components/cart/Cart";
 import CardList from './components/cart/CardList';
 import Testinomials from './components/Testinomials';
 import Profile from './components/Profile';
+// import Dashboard from './components/Dashboard';
 
 function App() {
   const [isLoggedin,setIsloggedin]=useState(false)
   const handleLogin=()=>{
     setIsloggedin(true)
   }
+  
+  // const handleLogout=()=>{
+  //   setIsloggedin(false)
+  // }
   return (
    <>
       <Router>
+      {/* <Dashboard  handleLogout={handleLogout}/> */}
           <Routes>
               <Route path='/' element={<Display setLoggedin={setIsloggedin}/>}/>
               <Route path='/login' element={<LoginForm handleLogin={handleLogin}/>}/>

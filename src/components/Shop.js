@@ -31,7 +31,7 @@ const Shop = ({product}) => {
     <>
     <div>
         {/* {products.map((product,index)=>( */}
-              <Card className='m-5 ' sx={{height:'400px',borderRadius:'20px',border:'1px solid #000'}} >
+              <Card className='m-5 hover:bg-neutral-800' sx={{height:'400px',borderRadius:'20px',border:'1px solid #000'}} >
                 <CardActionArea>
                   <CardMedia
                     component="img"
@@ -39,11 +39,11 @@ const Shop = ({product}) => {
                     alt="image"
                     sx={{height:'200px'}}
                   />
-                  <CardContent className='text-center'>
-                    <Typography gutterBottom variant="h5" className='text-rose-700'>
+                  <CardContent className='text-center '>
+                    <Typography gutterBottom variant="h5" className='text-rose-700 hover:text-white'>
                         {product.name}
                     </Typography>
-                    <Typography variant="h6" className='text-blue-600'>
+                    <Typography variant="h6" className='text-blue-600 hover:text-white'>
                         {product.category}<br/>
                         ${product.price}<br/>
                     </Typography>

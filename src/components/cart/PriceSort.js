@@ -4,10 +4,6 @@ import MenuItem from '@mui/material/MenuItem';
 import {Select,InputLabel,Box,FormControl} from '@mui/material';
 
 const PriceSortDropdown = ({ handlePriceSort }) => {
-
-  
-
-
   return (
     <>
     <Box sx={{minWidth:180,margin:'20px'}} >
