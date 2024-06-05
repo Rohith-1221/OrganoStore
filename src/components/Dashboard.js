@@ -113,7 +113,7 @@ const Dashboard=({handleLogout})=>{
           <Box sx={{ flexGrow: 0,marginRight:'20px' }}>
             <Tooltip title="Open Profile">
               <IconButton  sx={{ p: 0 }}>
-                <Avatar component={Link} to='/Profile' />
+                {/* <Avatar component={Link} to='/Profile' /> */}
               </IconButton>
             </Tooltip>
           </Box>

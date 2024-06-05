@@ -4,7 +4,7 @@ import Dashboard from './Dashboard';
 import Blog from './Blog';
 import Contact from './Contact';
 import CardList from './cart/CardList';
-import Testinomials from './Testinomials';
+import Testimonials from './Testimonials';
 import Details from './Details';
 // import About from './About';
 
@@ -32,7 +32,7 @@ const Home=({isLoggedin})=>{
     <Details/>
     <CardList/>
     {/* <About/> */}
-    <Testinomials/>
+    <Testimonials/>
     <Contact/>
 </>
   );

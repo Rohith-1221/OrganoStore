@@ -4,12 +4,12 @@ import StarIcon from '@mui/icons-material/Star';
 import StarHalfIcon from '@mui/icons-material/StarHalf';
 import './style.css'
 
-const Testinomials = () => {
+const Testimonials = () => {
   return (
     <div className='testinomials'>
         <Box className='text-slate-200 text-center p-4'>
             <Typography variant='p' >
-              Our Testinomials
+              Our Testimonials
             </Typography>
             <Typography variant='h2'>
               What They Say 
@@ -99,4 +99,4 @@ const Testinomials = () => {
   )
 }
 
-export default Testinomials
+export default Testimonials

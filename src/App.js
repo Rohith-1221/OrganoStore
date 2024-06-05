@@ -9,8 +9,8 @@ import Blog from './components/Blog';
 import Contact from './components/Contact';
 import Cart from "./components/cart/Cart";
 import CardList from './components/cart/CardList';
-import Testinomials from './components/Testinomials';
-import Profile from './components/Profile';
+import Testimonials from './components/Testimonials';
+// import Profile from './components/Profile';
 // import Dashboard from './components/Dashboard';
 
 function App() {
@@ -35,8 +35,8 @@ function App() {
               <Route path='/Blog' element={<Blog/>}/>
               <Route path='/Contact' element={<Contact/>}/>
               <Route path='/Cart' element={<Cart/>}/>
-              <Route path='/Testinomials' element={<Testinomials/>}/>
-              <Route path='/Profile' element={<Profile/>}/>
+              <Route path='/Testinomials' element={<Testimonials/>}/>
+              {/* <Route path='/Profile' element={<Profile/>}/> */}
           </Routes>
       </Router>
     </>
