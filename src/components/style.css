@@ -196,20 +196,18 @@
         width:220px;
     }
     .img1{
-        top:20%;
-        left: 10%;
+        top:28%;
+        left: 8%;
     }
     .img3{
-        top:5%;
+        top:8%;
         left: 55%;
     }
     .image2{
-        top:100%;
-        right: 20%;
+        display: none;
     }
     .image3{
-        top:98%;
-        right: 60%;
+        display: none;
     }
     .features{
         display: none;
